@@ -1,0 +1,25 @@
+for (Object o : map.keySet()) {
+            System.out.println(map.get(o).toString());
+            }
+
+
+
+        Set set = map.entrySet();
+        for (Object o :set) {
+           Map.Entry entry= (Map.Entry) o;
+            System.out.println("key:"+entry.getKey()+"value"+entry.getValue());
+        }
+
+
+        Iterator iterator =map.entrySet().iterator();
+        while (iterator.hasNext()){
+            Object next = iterator.next();
+            Map.Entry entry = (Map.Entry) next;
+            System.out.println("key:"+entry.getKey()+"value"+entry.getValue());
+        }
+
+
+
+        for(Object v :map.values()){
+            System.out.println(v);
+        }

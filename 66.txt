@@ -1,0 +1,110 @@
+mysql -uroot -p123
+
+quit 
+
+mysql -uroot -p
+
+create database day18;
+
+use day18;
+
+建表语句:
+create table test (id int , name varchar(50) , age int , gender varchar(50));
+
+desc test;查表的结构
+
+insert into test values (1,'zhangSan',20,'man');
+
+select * from test;
+
+update test set gender = 'women';
+
+select * from test;
+
+delete from test;
+
+select * from test;
+
+drop table test;
+
+show tables;
+
+drop database day18;
+
+show databases;
+
+create table student (name varchar(50),age int)
+
+show tables;
+
+alter table student rename to teacher;
+
+alter table teacher add(gender varchar(50));
+
+insert into teacher (name,age) value ('liSi',18);
+
+selete * from teacher;
+
+alter table teacher add(score varchar (50) not null);
+
+insert into teacher values(null,19,null,80);
+
+select * from teacher;
+
+updata teacher set name = 'zhangSan' where score = 
+'80';
+
+delete from teacher where name = 'liSi';
+
+select age from teacher;
+
+insert into teacher values('zhaoLiu',25,'man','90');
+
+select * from teaher;
+
+selete name,age from teacher where age>20 and score>60;
+
+selete * from teacher;
+
+updata teacher set gener = 'woman' where name = 'zhangSan'
+
+select * from teacher;
+alter table teacher modify score int;
+
+select *,max(score )from teacher group by gender;
+ 
+select name,age+score as '厉害了' from teacher;
+
+select * from teacher group by gender having score >70;
+
+select * from teacher order by score asc;
+
+insert into teacher values('zhaolliu',25,'man','90');
+
+insert into teacher values('zhaolliu',25,'man','90');
+
+select distinct * from teacher;
+
+updata teacher set score = '90' where name = 'zhangSan'
+
+select distinct * from teacher order by score asc,age desc;
+
+insert into teacher values('zhangSanFeng',99'man'.9999');
+
+select * from teacher where name like '________' or name like 'zhang%';
+
+select concat( name,'666') from teacher;
+
+select name+age from teacher;
+
+update teacher set gender = 'null' where name = 'wangWu';
+
+select ifnull(gender,'man') from teacher; 
+
+select sum(score) from teacher;
+
+select max(age),min(score) from teacher;
+
+select avg(score) from teacher;
+
+
